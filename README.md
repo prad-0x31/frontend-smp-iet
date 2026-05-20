@@ -1,16 +1,27 @@
-# React + Vite
+# Frontend Project Tasks
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Necessary Tasks
 
-Currently, two official plugins are available:
+1. Implement Dark and Light mode  
+2. Add search bar to search through items  
+3. Shopping Cart feature  
+4. Create the component card to render items (in Home.jsx)  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Bonus Tasks
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Leave rating button with 3 states:
+   - Leave Rating  
+   - Range slider  
+   - Edit Rating  
 
-## Expanding the ESLint configuration
+2. Signin Popup:
+   - Shifts between login and register with button press  
+   - Entered email/username must be displayed in headbar  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+3. Additional filters:
+   - Filter by price  
+   - Filter by category  
+
+---
