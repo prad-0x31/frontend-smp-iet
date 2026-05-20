@@ -1,5 +1,5 @@
 # Frontend Project Tasks
-
+Final goal: https://project-sample-peach.vercel.app/
 ## Necessary Tasks
 
 1. Implement Dark and Light mode  
