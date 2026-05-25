@@ -27,6 +27,25 @@
   --shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
 }
 
+/* ── ADDED LATER ───────────────────────────────────────── */
+.btn.themeButton {
+  width: 32px;
+  height: 32px;
+  padding: 4px;
+  border-radius: 1000px;
+  background-color: var(--bg);
+  border: 1px solid var(--border)
+}
+
+.themeButton img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+
+
+
 /* ── RESET & BASE ───────────────────────────────────────── */
 *,
 *::before,

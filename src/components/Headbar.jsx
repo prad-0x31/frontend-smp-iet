@@ -1,3 +1,7 @@
+import { useTheme } from "../context/ThemeContext"
+import darkIcon from "../icons/moon2.png"
+import lightMode from "../icons/brightness.png"
+
 const NAV_ITEMS = [
   { label: "Shop" },
   { label: "Collections" },
@@ -6,6 +10,9 @@ const NAV_ITEMS = [
 ];
 
 function Headbar() {
+
+  const { darkMode, toggleTheme } = useTheme();
+
   return (
     <header className="header">
       <div className="header-brand">
@@ -27,6 +34,7 @@ function Headbar() {
       </nav>
 
       <div className="header-actions">
+        <button className="btn btn-sm btn-ghost themeButton" onClick={toggleTheme} > {darkMode ? <img src={darkIcon} /> : <img src={lightMode} />} </button>
         <button type="button" className="btn btn-sm btn-ghost" disabled>
           Sign In
         </button>
