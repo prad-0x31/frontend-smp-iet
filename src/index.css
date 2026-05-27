@@ -43,7 +43,22 @@
   object-fit: contain;
 }
 
+.app-layout {
+  display: flex;
+  /* min-height: calc(100vh - 72px); */
+}
 
+.app-content {
+  flex: 1;
+}
+
+.sideBar {
+  position: fixed;
+  bottom: 0%;
+  right: 0%;
+  margin-bottom: 16px;
+  margin-right: 16px;
+}
 
 
 /* ── RESET & BASE ───────────────────────────────────────── */
