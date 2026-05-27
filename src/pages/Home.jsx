@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import items from "../data/items";
+import ItemCard from "../components/ItemCard";
 
 
 
@@ -24,15 +25,9 @@ function Home() {
         </div>
       </section>
 
-      <section className="product-list">
-        {items.map((item) => (
-          <div key={item.id} className="product-line">
-            {/* <div><img src={item.image} /></div> */}
-            <div>{item.name}</div>
-            <div>{item.category}</div>
-            <div>₹{item.price}</div>
-            <div>{item.description}</div>
-          </div>
+      <section className="item-grid">
+        {items.map(item => (
+          <ItemCard key={item.id} item={item} />
         ))}
       </section>
     </main>
