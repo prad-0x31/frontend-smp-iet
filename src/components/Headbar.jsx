@@ -1,6 +1,7 @@
 import { useTheme } from "../context/ThemeContext"
 import darkIcon from "../icons/moon2.png"
 import lightMode from "../icons/brightness.png"
+import Navbar from "./Navbar";
 
 const NAV_ITEMS = [
   { label: "Shop" },
@@ -25,16 +26,9 @@ function Headbar() {
         </div>
       </div>
 
-      <nav className="header-nav">
-        {NAV_ITEMS.map((item) => (
-          <span key={item.label} className="nav-link">
-            {item.label}
-          </span>
-        ))}
-      </nav>
-
+    <Navbar className="nav"  />
       <div className="header-actions">
-        <button className="btn btn-sm btn-ghost themeButton" onClick={toggleTheme} > {darkMode ? <img src={darkIcon} /> : <img src={lightMode} />} </button>
+        <button className={!darkMode?'btn btn-sm btn-ghost themeButton lightIcon' : "btn btn-sm btn-ghost themeButton" } onClick={toggleTheme} > {darkMode ? <img src={darkIcon} /> : <img src={lightMode} />} </button>
         <button type="button" className="btn btn-sm btn-ghost" disabled>
           Sign In
         </button>

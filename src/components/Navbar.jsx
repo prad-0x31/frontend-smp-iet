@@ -13,6 +13,15 @@ export default function Navbar() {
         Shop
       </NavLink>
       <NavLink
+        to="/Collections"
+        className={({ isActive }) =>
+          isActive ? "nav-link active" : "nav-link"
+        }
+      >
+        Collections
+      </NavLink>
+
+      <NavLink
         to="/about"
         className={({ isActive }) =>
           isActive ? "nav-link active" : "nav-link"
@@ -20,6 +29,16 @@ export default function Navbar() {
       >
         About
       </NavLink>
+
+      <NavLink
+        to="/Contact"
+        className={({ isActive }) =>
+          isActive ? "nav-link active" : "nav-link"
+        }
+      >
+        Contact
+      </NavLink>
+
     </nav>
   );
 }

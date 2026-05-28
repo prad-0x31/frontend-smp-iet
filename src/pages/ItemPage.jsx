@@ -1,5 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import items from "../data/items";
+import PurchaseButton from "../components/PurchaseButton";
 
 function ItemPage() {
   const { id } = useParams();
@@ -31,6 +32,7 @@ function ItemPage() {
 
         <div className="detail-actions">
           <span className="item-meta">Fast shipping · 30-day returns</span>
+          <PurchaseButton item={item}/>
         </div>
       </div>
     </main>
