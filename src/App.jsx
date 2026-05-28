@@ -6,7 +6,6 @@ import About from "./pages/About";
 import Collections from "./pages/Collections";
 import Contact from "./pages/Contact";
 import CartSidebar from './components/CartSidebar'
-import Navbar from "./components/Navbar";
 
 function App() {
   return (
