@@ -73,6 +73,7 @@
   margin-bottom: 1rem;
   padding: 0;
   height: fit-content;
+  flex: 1;
 }
 
 .search ::placeholder {
@@ -119,6 +120,29 @@
     padding: 0.5rem;
 }
 
+.snf {
+  display: flex;
+  gap: 1rem;
+}
+
+.snf select {
+  padding: 1rem 1.2rem;
+  border: 1px solid var(--border);
+  border-radius: 0.8rem;
+  background: var(--bg-card);
+  color: var(--text);
+  height: fit-content;
+  font-weight: 300;
+  color: var(--text);
+  /* padding-right: rem; */
+}
+
+
+.filters {
+  display: flex;
+  gap: 1rem;
+} 
+
 /* ── CART SIDEBAR (ADDED) ───────────────────────────────────────── */
 
 .cart-empty {
@@ -132,6 +156,7 @@
   box-shadow: none;
   border-radius: 1rem;
   width: 320px;
+  max-height: 60vh;
 }
 
 .cart-header {
@@ -161,6 +186,10 @@
   gap: 1rem;
   border-bottom: 1px solid var(--border);
   padding-bottom:1rem;
+  max-height: 40vh;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: var(--bg-card) var(--bg-input);
 }
 
 .cart-item {
