@@ -69,6 +69,34 @@
   margin-right: 16px;
 }
 
+.search {
+  margin-bottom: 1rem;
+  padding: 0;
+  height: fit-content;
+}
+
+.search ::placeholder {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.search input {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  border: 1px solid var(--border);
+  border-radius: 0.8rem;
+  background: var(--bg-card);
+  color: var(--text);
+}
+
+.searchResult {
+  margin-top: 1rem;
+  padding: 0 1rem;
+}
+.empty {
+  color: var(--text-muted);
+}
+
 
 /* ── RESET & BASE ───────────────────────────────────────── */
 *,
@@ -107,7 +135,7 @@ body {
 
 .item-card {
   border-bottom: 1px solid var(--border);
-  padding: 0.75rem 0;
+  padding: 0rem 0;
   background: none;
   display: block;
   box-shadow: none;
