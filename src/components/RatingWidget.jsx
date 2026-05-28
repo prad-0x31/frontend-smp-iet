@@ -54,10 +54,10 @@ export default function RatingWidget() {
     >
       {submitted !== null ? (
         <>
-          {starDisplay(submitted)} {submitted.toFixed(1)} Edit Review
+          {starDisplay(submitted)} {submitted.toFixed(1)} ✎
         </>
       ) : (
-        "☆ Leave Review"
+        "☆"
       )}
     </button>
   );

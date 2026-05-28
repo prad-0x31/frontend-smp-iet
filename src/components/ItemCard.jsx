@@ -1,9 +1,14 @@
 import { Link } from "react-router-dom";
 import PurchaseButton from './PurchaseButton'
+import RatingWidget from './RatingWidget'
 
 export default function ItemCard ({item}) {
     return (
     <div className="item-card">
+        <div className="RatingWidget">
+                <RatingWidget />
+        </div>
+
         <Link to={`/item/${item.id}`}>
             <div className="item-card-image">
                 <img src={item.image} alt={item.name} />
@@ -19,13 +24,13 @@ export default function ItemCard ({item}) {
 
             <div className="item-card-footer">
                 <div>
-                    <span className="item-price">₹{item.price.toFixed(2)}</span>
+                   <span className="item-price">₹{item.price}</span>
+                   <span className="item-meta">Free Delivery</span>
                 </div>
                 <div className="item-card-actions">
-                    <PurchaseButton item={item} />  
+                    <PurchaseButton item={item} /> 
                 </div>
-            </div>
-        
+            </div>            
     </div>
     );
 }
