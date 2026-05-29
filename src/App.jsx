@@ -5,7 +5,7 @@ import ItemPage from "./pages/ItemPage";
 import About from "./pages/About";
 import Collections from "./pages/Collections";
 import Contact from "./pages/Contact";
-import CartSidebar from './components/CartSidebar'
+import CartSidebar from './components/CartSidebar';
 
 function App() {
   return (

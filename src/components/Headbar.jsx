@@ -2,6 +2,8 @@ import { useTheme } from "../context/ThemeContext"
 import darkIcon from "../icons/moon2.png"
 import lightMode from "../icons/brightness.png"
 import Navbar from "./Navbar";
+import ModalOne from "./SignInModal";
+import { useState } from "react";
 
 const NAV_ITEMS = [
   { label: "Shop" },
@@ -12,6 +14,7 @@ const NAV_ITEMS = [
 
 function Headbar() {
 
+  const [showModal, setShowModal] = useState(false)
   const { darkMode, toggleTheme } = useTheme();
 
   return (
@@ -29,9 +32,14 @@ function Headbar() {
     <Navbar className="nav"  />
       <div className="header-actions">
         <button className={!darkMode?'btn btn-sm btn-ghost themeButton lightIcon' : "btn btn-sm btn-ghost themeButton" } onClick={toggleTheme} > {darkMode ? <img src={darkIcon} /> : <img src={lightMode} />} </button>
-        <button type="button" className="btn btn-sm btn-ghost" disabled>
+        <button type="button" className="btn btn-sm btn-primary" onClick={() => setShowModal(true)}>
           Sign In
         </button>
+
+        {showModal &&( 
+          <ModalOne
+            CloseModal={() => setShowModal(false)} 
+          />)}
       </div>
     </header>
   );

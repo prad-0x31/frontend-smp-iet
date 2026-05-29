@@ -143,6 +143,11 @@
   gap: 1rem;
 } 
 
+.pass-fail {
+  font-size: 0.7rem;
+  color: var(--text);
+}
+
 /* ── CART SIDEBAR (ADDED) ───────────────────────────────────────── */
 
 .cart-empty {
