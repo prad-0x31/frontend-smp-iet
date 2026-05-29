@@ -1,17 +1,23 @@
 import { useState } from "react";
 
-export default function ModalOne ({CloseModal, SignIn}) {
+export default function ModalOne ({CloseModal, Signin}) {
 
-    const [authMode, setAuthMode] = useState("register");
+    const [authMode, setAuthMode] = useState("login");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [username, setUsername] = useState ("")
     const [phoneNumber, setPhoneNumber] = useState ("")
     const [confirmPassword, setConfirmPassword] = useState ("")
 
+    function handleSignin (e) {
+        e.preventDefault()
+        Signin (username);
+        CloseModal();
+    }
+
     return (
         <div className="modal-backdrop" onClick={CloseModal}>
-            <form className="modal auth-modal" onClick={e => e.stopPropagation()}>
+            <form className="modal auth-modal" onClick={e => e.stopPropagation()} onSubmit={handleSignin} >
                 <div className="auth-header">
                     <button
                         type="button"
@@ -77,8 +83,20 @@ export default function ModalOne ({CloseModal, SignIn}) {
                         </>}
                     </div>
                     <div className="modal-actions auth-actions">
-                        <button type="button" className="btn btn-ghost" onClick={CloseModal}>Cancel</button>
-                        <button type="submit" className="btn btn-primary" disabled={confirmPassword!==password && authMode === 'register'} >Submit</button>
+                        <button 
+                            type="button"
+                            className="btn btn-ghost"
+                            onClick={CloseModal}
+                        >
+                            Cancel
+                        </button>
+                        <button 
+                            type="submit"
+                            className="btn btn-primary"
+                            disabled={confirmPassword!==password && authMode === 'register'}
+                        >
+                            Submit
+                        </button>
                     </div>
                 </div>
             </form>
